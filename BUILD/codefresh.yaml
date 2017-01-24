@@ -1,9 +1,8 @@
 version: '1.0'
-
-steps: compile
-  step-name: one
-    docker build -t Xcross
-  another-step: 2
-    docker run --rm -it Xcross bash
-  the-very-last-step: 3
- su -l jenkins
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: briangitsit/tsschecker
+    working_directory: ./
+    dockerfile: BUILD/BUILD.md
