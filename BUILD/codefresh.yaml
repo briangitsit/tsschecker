@@ -1,6 +1,6 @@
 version: '1.0'
 
-steps:
+steps: compile
   step-name: one
     docker build -t Xcross
   another-step: 2
